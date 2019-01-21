@@ -14,6 +14,8 @@ public class DemoTest {
 		
 		driver.get("https://www.bestbuy.com/");
 		String currentWindowHandle=driver.getWindowHandle(); 
+		
+		System.out.println("Starting the system");
 
 		String htmlModalWindowHandle=null; 
 		for(String windowHandle:driver.getWindowHandles()) 
@@ -24,5 +26,7 @@ public class DemoTest {
 		} 
 		driver.switchTo().window(htmlModalWindowHandle);
 		driver.findElement(By.className("close")).click();
+		System.out.println("Closing the system for merging in git");
+		
 	}
 }
